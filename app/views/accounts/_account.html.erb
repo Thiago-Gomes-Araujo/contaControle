@@ -1,0 +1,21 @@
+<div id="<%= dom_id(account) %>">
+  <p>
+    <strong>Nome:</strong>
+    <%= account.name %>
+  </p>
+
+  <p>
+    <strong>Valor:</strong>
+    <%= number_to_currency(account.value, unit: "R$", separator: ",", delimiter: ".") %>
+  </p>
+
+  <p>
+    <strong>Data de Vencimento:</strong>
+    <%= l(account.due_date, format: :default) %>
+  </p>
+
+  <p>
+    <strong>Pago:</strong>
+    <%= account.paid ? "Sim" : "Não" %>
+  </p>
+</div>

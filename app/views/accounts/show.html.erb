@@ -1,0 +1,28 @@
+<p>
+  <strong>Nome da Conta:</strong>
+  <%= @account.name %>
+</p>
+
+<p>
+  <strong>Valor:</strong>
+  <%= number_to_currency(@account.value) %>
+</p>
+
+<p>
+  <strong>Data de Vencimento:</strong>
+  <%= @account.due_date %>
+</p>
+
+<p>
+  <strong>Conta Paga?</strong>
+  <%= @account.paid ? 'Sim' : 'Não' %>
+</p>
+
+<% if @account.due_soon? %>
+  <p style="color: red;">
+    <strong>Aviso:</strong> A data de vencimento está próxima!
+  </p>
+<% end %>
+
+<%= link_to 'Edit', edit_account_path(@account) %>
+<%= link_to 'Back', accounts_path %>

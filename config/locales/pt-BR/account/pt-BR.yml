@@ -1,0 +1,11 @@
+pt-BR:
+  activerecord:
+    models:
+      account: Conta
+      
+    attributes:
+      account:
+        name: Nome da Conta
+        due_date: Data de Vencimento
+        paid: Conta Paga ?
+        value: Valor (R$)
