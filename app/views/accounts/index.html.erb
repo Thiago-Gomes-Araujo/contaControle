@@ -33,7 +33,7 @@
             </button>
             <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton<%= account.id %>">
               <li><%= link_to 'Editar', edit_account_path(account), class: 'dropdown-item' %></li>
-              <li><%= link_to 'Excluir', account_path(account), method: :delete, data: { confirm: "Tem certeza?" }, class: 'dropdown-item' %></li>
+              <li><%= button_to 'Excluir', account_path(account), method: :delete, data: { confirm: "Tem certeza?" }, class: 'dropdown-item' %></li>
             </ul>
           </div>
         </td>
